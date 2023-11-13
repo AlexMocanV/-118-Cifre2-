@@ -1,0 +1,31 @@
+#include <iostream>
+
+using namespace std;
+
+int main()
+{
+    long long int n,nr=0,s=0,uc,ok=1,c;
+    cin>>n;
+    c=n;
+    while(c>0)
+    {
+        nr++;
+        c=c/10;
+    }
+    while(n>0)
+    {
+        uc=n%10;
+        if(nr==2)
+        {
+            ok=0;
+        }
+        if(ok==0)
+        {
+            s+=uc;
+        }
+        n=n/10;
+        nr--;
+    }
+    cout<<s;
+    return 0;
+}
